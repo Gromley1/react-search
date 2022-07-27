@@ -1,0 +1,9 @@
+@use './scss/base' as *;
+@use './scss/abstracts' as *;
+
+body {
+	min-height: 100vh;
+	font-size: toRem(16px);
+}
+
+
