@@ -1,4 +1,11 @@
 .app {
-// placeholder
+	display: flex;
+	justify-content: center;
+
+	&__btn {
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
