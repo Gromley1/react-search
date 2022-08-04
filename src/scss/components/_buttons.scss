@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+%btn {
+	border-radius: toRem(4px);
+	background-color: $color-primary-blue;
+	color: $color-primary-white;
+	border: none;
+	padding: toRem(8px) toRem(16px);
+
+	&:hover {
+		cursor: pointer;
+		box-shadow:  0 toRem(2px) toRem(12px) rgb(0 0 0 / 0.2);
+		transform: translateY(toRem(-2px));
+	}
+}

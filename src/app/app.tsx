@@ -8,8 +8,10 @@ function App() {
     	<div className={styles.app}>
 			<AppButton 
 				className={styles.app__btn} 
+				{...btnProps}
 				onClick={(): void => console.log('click')} 
-				{...btnProps}>App Button
+				>
+					App Button
 			</AppButton>
     	</div>
 	);
