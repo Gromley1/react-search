@@ -1,12 +1,27 @@
-@use '../scss/components/' as *;
-
+@use '../scss/abstracts' as *;
+@use '../scss/components' as *;
 
 .app {
 	display: flex;
 	justify-content: center;
 
+	// .app__actions
+	&__actions {
+		& > * {
+			&:first-child {
+				margin-right: toRem(6px)
+			}
+		}
+	}
+
+	// .app__btn
 	&__btn {
 		@extend %btn;
+	}
+
+	// .app__btnInverted
+	&__btnInverted {
+		@extend %btn-inverted
 	}
 }
 

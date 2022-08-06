@@ -3,16 +3,27 @@ import styles from './app.module.scss';
 import { AppButton } from './components';
 
 function App() {
-	const btnProps = {type: 'button'}
+	const btnProps = { type: 'button' }
 	return (
     	<div className={styles.app}>
-			<AppButton 
-				className={styles.app__btn} 
-				{...btnProps}
-				onClick={(): void => console.log('click')} 
+
+			<div className={styles.app__actions}>
+				<AppButton 
+					className={styles.app__btn} 
+					{...btnProps}
+					onClick={(): void => console.log('btn click')} 
 				>
 					App Button
-			</AppButton>
+				</AppButton>
+
+				<AppButton 
+					className={styles.app__btnInverted} 
+					{...btnProps}
+					onClick={(): void => console.log('btn inverted click')}
+				>
+					App Button Inverted
+				</AppButton>
+			</div>
     	</div>
 	);
 }

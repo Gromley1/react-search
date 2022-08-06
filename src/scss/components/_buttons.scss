@@ -1,15 +1,33 @@
 @use '../abstracts' as *;
 
-%btn {
+%default-btn-props {
 	border-radius: toRem(4px);
-	background-color: $color-primary-blue;
-	color: $color-primary-white;
-	border: none;
+
 	padding: toRem(8px) toRem(16px);
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		outline: none;
 		cursor: pointer;
-		box-shadow:  0 toRem(2px) toRem(12px) rgb(0 0 0 / 0.2);
+		box-shadow: 0 toRem(6px) toRem(2px) toRem(-2px)  rgb(0 0 0 / 0.2);
 		transform: translateY(toRem(-2px));
 	}
+}
+
+%btn {
+	@extend %default-btn-props;
+
+	background-color: $color-primary-blue;
+	border: none;
+	color: $color-primary-white;
+	
+}
+
+%btn-inverted {
+	@extend %default-btn-props;
+
+	border: toRem(1px) solid $color-primary-purple;
+	color: $color-primary-purple;
+	background-color: transparent;
 }
