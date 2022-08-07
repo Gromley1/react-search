@@ -13,15 +13,5 @@
 			}
 		}
 	}
-
-	// .app__btn
-	&__btn {
-		@extend %btn;
-	}
-
-	// .app__btnInverted
-	&__btnInverted {
-		@extend %btn-inverted
-	}
 }
 
