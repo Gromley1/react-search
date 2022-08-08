@@ -20,6 +20,14 @@ function App() {
 				>
 					App Button Inverted
 				</AppButton>
+
+				<AppButton
+					style={ButtonStyle.inverted}
+					rounded
+					onClick={(): void => console.log('btn rounded inverted click')}
+				>
+					App Button Inverted
+				</AppButton>
 			</div>
     	</div>
 	);

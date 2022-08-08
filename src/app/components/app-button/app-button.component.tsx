@@ -8,14 +8,15 @@ interface AppButtonProps {
 	type: "button" | "submit" | "reset" | undefined;
 	disabled?: boolean;
 	style?: ButtonStyle;
+	rounded?: boolean;
 	className?: string;
 	onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 export const AppButton = (props: AppButtonProps): ReactElement => {
-	const { children, type, disabled, style, className, onClick, ...rest } = props;
+	const { children, type, disabled, style, rounded, className, onClick, ...rest } = props;
 
-	const classNameProps = classNames(styles.btn, styles[`btn--${style}`] , className);
+	const classNameProps = classNames(styles.btn, styles[`btn--${style}`], {[styles['btn--rounded']]: rounded}, className);
 
 	return (
 		<button className={classNameProps} type={type} disabled={disabled} onClick={onClick} {...rest}>

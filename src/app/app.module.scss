@@ -8,7 +8,7 @@
 	// .app__actions
 	&__actions {
 		& > * {
-			&:first-child {
+			&:not(:last-child) {
 				margin-right: toRem(6px)
 			}
 		}

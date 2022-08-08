@@ -29,4 +29,9 @@
 		color: $color-primary-purple;
 		background-color: transparent;
 	}
+
+	// .btn--rounded
+	&--rounded {
+		border-radius: toRem(20px);
+	}
 }
