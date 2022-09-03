@@ -1,0 +1,81 @@
+@use '../../../scss/abstracts/' as *;
+
+.heading {
+
+	// .heading--1
+	&--1 {
+		font-size: toRem(48px);
+
+		@include respond-below(sm) {
+			font-size: toRem(30px);
+		}
+	}
+
+	// .heading--2
+	&--2 {
+		font-size: toRem(40px);
+
+		@include respond-below(sm) {
+			font-size: toRem(30px);
+		}
+	}
+
+	// .heading--3
+	&--3 {
+		font-size: toRem(32px);
+		font-weight: 600;
+
+		@include respond-below(sm) {
+			font-size: toRem(30px);
+		}
+	}
+
+	// .heading--4
+	&--4 {
+		font-size: toRem(24px);
+
+		@include respond-below(sm) {
+			font-size: toRem(20px);
+		}
+	}
+
+	// .heading--5
+	&--5 {
+		font-size: toRem(20px);
+	}
+
+	// .heading--6
+	&--6 {
+		font-size: toRem(18px);
+	}
+
+	// .heading--primaryBlue
+	&--primaryBlue {
+		color: $color-primary-blue;
+	}
+
+	// .heading--light
+	&--light {
+		font-weight: 300;
+	}
+
+	// .heading--regular
+	&--regular {
+		font-weight: 400;
+	}
+
+	// .heading--medium
+	&--medium {
+		font-weight: 500;
+	}
+
+	// .heading--semiBold
+	&--semiBold {
+		font-weight: 600;
+	}
+
+	// .heading--bold
+	&--bold {
+		font-weight: 700;
+	}
+}

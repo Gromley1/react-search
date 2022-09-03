@@ -2,8 +2,24 @@
 @use './scss/abstracts' as *;
 
 body {
+	color: $color-primary-text;
 	min-height: 100vh;
 	font-size: toRem(16px);
+	font-weight: 400;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	margin:0; 
+	font-size:inherit; 
+	font-weight:inherit;
+}
+p { 
+	margin:0; 
 }
 
 

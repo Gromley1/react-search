@@ -3,13 +3,18 @@
 %default-btn-props {
 	border-radius: toRem(4px);
 	padding: toRem(8px) toRem(16px);
+	transition: transform .1s;
 
 	&:hover,
 	&:focus-visible {
 		outline: none;
 		cursor: pointer;
 		box-shadow: 0 toRem(6px) toRem(2px) toRem(-2px)  rgb(0 0 0 / 0.2);
-		transform: translateY(toRem(-2px));
+		transform: translateY(toRem(-1px));
+	}
+
+	&:active {
+		transform: translateY(toRem(1px))
 	}
 }
 
