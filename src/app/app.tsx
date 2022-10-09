@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './app.module.scss';
 import { ArticlesDisplay } from './features/articles-display/articles-display';
-import { ButtonStyle, ButtonType } from './shared/enums';
 
 function App() {
 

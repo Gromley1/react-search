@@ -6,7 +6,7 @@ export const AppSearch = (): ReactElement => {
 	
 	return (
 		<>
-			< input type="text" />
+			<input type="text" />
 
 		</>
 	);

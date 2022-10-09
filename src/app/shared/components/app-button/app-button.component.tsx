@@ -1,7 +1,7 @@
 import { MouseEventHandler, ReactElement, ReactNode } from "react";
 import classNames from 'classnames';
 import styles from './app-button.module.scss';
-import { ButtonStyle, ButtonType } from "../../shared/enums";
+import { ButtonStyle, ButtonType } from '../../enums';
 
 interface AppButtonProps {
 	children: ReactNode;
