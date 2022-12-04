@@ -1,13 +1,22 @@
 import { ReactElement, useState } from "react";
+import styles from './app-search.module.scss';
 
-export const AppSearch = (): ReactElement => {
+interface AppSearchProps {
+	onChange: (e: any) => void;
+}
+
+export const AppSearch = ({ onChange }: AppSearchProps): ReactElement => {
 	const [results, setResults] = useState();
 
 	
 	return (
 		<>
-			<input type="text" />
-
+			<input
+      			className={styles.search}
+      			type="text"
+      			onChange={onChange}
+      			placeholder="Search by the title ..."
+    		/>
 		</>
 	);
 } 

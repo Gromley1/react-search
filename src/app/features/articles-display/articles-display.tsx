@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useState } from "react";
 import { GetArticles } from "../../services/models";
-import { getArticles }  from '../../services/ny-times.service';
-import { AppCard } from '../../shared/components';
+import { getArticles, searchArticles }  from '../../services/ny-times.service';
+import { AppCard, AppSearch } from '../../shared/components';
 import styles from './articles-display.module.scss';
 
 export const ArticlesDisplay = (): ReactElement => {
@@ -12,13 +12,16 @@ export const ArticlesDisplay = (): ReactElement => {
 			.then((res) => setArticles(res.data))
 	}, [])
 
-	useEffect(() => {
-		console.log(articles)
-	}, [articles])
+	const onSearchArticles = (searchQuery: string): void => {
+		searchArticles(searchQuery)
+			.then(res => console.log(res.data))
+	}
 
 	return (
 		<>
 			<div className={styles.articles}>
+				<AppSearch onChange={(e: any): void => onSearchArticles(e.target.value)}/>
+
 				{articles?.results.map((x: any) => (
 					<AppCard key={x.id}>
 						{x.title}
