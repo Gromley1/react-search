@@ -5,11 +5,7 @@ interface AppSearchProps {
 	onChange: (e: any) => void;
 }
 
-export const AppSearch = ({ onChange }: AppSearchProps): ReactElement => {
-	const [results, setResults] = useState();
-
-	
-	return (
+export const AppSearch = ({ onChange }: AppSearchProps): ReactElement => (
 		<>
 			<input
       			className={styles.search}
@@ -19,4 +15,3 @@ export const AppSearch = ({ onChange }: AppSearchProps): ReactElement => {
     		/>
 		</>
 	);
-} 
